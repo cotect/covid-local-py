@@ -41,7 +41,8 @@ with covid_local.ApiClient() as api_client:
     api_instance = covid_local.DefaultApi(api_client)
 
     try:
-        # Get all items for Berlin Mitte
+        # Get all items (hotlines, websites, test sites, health departments) 
+        # for Berlin Mitte
         result = api_instance.get_all(place_name="Berlin Mitte")
         print(result)
 
