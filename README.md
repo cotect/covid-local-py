@@ -51,7 +51,7 @@ with covid_local.ApiClient() as api_client:
         print(result)
 
         # Do the same thing, but define the place via its geonames.org ID
-        result = api_instance.get_all(geonames_id=2950159, limit=3)
+        result = api_instance.get_test_sites(geonames_id=2950159, limit=3)
         print(result)
 
         # Search for places matching the query "Berlin Mitte"
