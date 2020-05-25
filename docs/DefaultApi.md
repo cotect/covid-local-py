@@ -1,16 +1,16 @@
 # covid_local.DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://ec2-3-90-67-33.compute-1.amazonaws.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_all**](DefaultApi.md#get_all) | **GET** /all | Get all items for a place
-[**get_health_departments**](DefaultApi.md#get_health_departments) | **GET** /health_departments | Get responsible health departments for a place
-[**get_hotlines**](DefaultApi.md#get_hotlines) | **GET** /hotlines | Get hotlines for a place
-[**get_test_sites**](DefaultApi.md#get_test_sites) | **GET** /test_sites | Get nearby test sites for a place (sorted by distance to place)
-[**get_websites**](DefaultApi.md#get_websites) | **GET** /websites | Get websites for a place
-[**search_places**](DefaultApi.md#search_places) | **GET** /places | Search for places via free-form query
-[**test**](DefaultApi.md#test) | **GET** /test | Shows all entries for Berlin Mitte (redirects to /all endpoint)
+| Method                                                             | HTTP request                | Description                                                     |
+| ------------------------------------------------------------------ | --------------------------- | --------------------------------------------------------------- |
+| [**get_all**](DefaultApi.md#get_all)                               | **GET** /all                | Get all items for a place                                       |
+| [**get_health_departments**](DefaultApi.md#get_health_departments) | **GET** /health_departments | Get responsible health departments for a place                  |
+| [**get_hotlines**](DefaultApi.md#get_hotlines)                     | **GET** /hotlines           | Get hotlines for a place                                        |
+| [**get_test_sites**](DefaultApi.md#get_test_sites)                 | **GET** /test_sites         | Get nearby test sites for a place (sorted by distance to place) |
+| [**get_websites**](DefaultApi.md#get_websites)                     | **GET** /websites           | Get websites for a place                                        |
+| [**search_places**](DefaultApi.md#search_places)                   | **GET** /places             | Search for places via free-form query                           |
+| [**test**](DefaultApi.md#test)                                     | **GET** /test               | Shows all entries for Berlin Mitte (redirects to /all endpoint) |
 
 
 # **get_all**
@@ -26,10 +26,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -52,12 +52,12 @@ limit = 5 # int | Maximum number of test sites to return (optional) (default to 
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **place_name** | **str**| The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] 
- **geonames_id** | **int**| The geonames.org id of the place (either place_name or geonames_id must be provided) | [optional] 
- **max_distance** | **float**| Maximum distance in degrees lon/lat for test sites | [optional] [default to 0.5]
- **limit** | **int**| Maximum number of test sites to return | [optional] [default to 5]
+| Name             | Type      | Description                                                                                                 | Notes                       |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------- | --------------------------- |
+| **place_name**   | **str**   | The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional]                  |
+| **geonames_id**  | **int**   | The geonames.org id of the place (either place_name or geonames_id must be provided)                        | [optional]                  |
+| **max_distance** | **float** | Maximum distance in degrees lon/lat for test sites                                                          | [optional] [default to 0.5] |
+| **limit**        | **int**   | Maximum number of test sites to return                                                                      | [optional] [default to 5]   |
 
 ### Return type
 
@@ -73,10 +73,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -93,10 +93,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -117,10 +117,10 @@ geonames_id = 56 # int | The geonames.org id of the place (either place_name or 
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **place_name** | **str**| The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] 
- **geonames_id** | **int**| The geonames.org id of the place (either place_name or geonames_id must be provided) | [optional] 
+| Name            | Type    | Description                                                                                                 | Notes      |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------- | ---------- |
+| **place_name**  | **str** | The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] |
+| **geonames_id** | **int** | The geonames.org id of the place (either place_name or geonames_id must be provided)                        | [optional] |
 
 ### Return type
 
@@ -136,10 +136,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -156,10 +156,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -180,10 +180,10 @@ geonames_id = 56 # int | The geonames.org id of the place (either place_name or 
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **place_name** | **str**| The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] 
- **geonames_id** | **int**| The geonames.org id of the place (either place_name or geonames_id must be provided) | [optional] 
+| Name            | Type    | Description                                                                                                 | Notes      |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------- | ---------- |
+| **place_name**  | **str** | The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] |
+| **geonames_id** | **int** | The geonames.org id of the place (either place_name or geonames_id must be provided)                        | [optional] |
 
 ### Return type
 
@@ -199,10 +199,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -219,10 +219,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -245,12 +245,12 @@ limit = 5 # int | Maximum number of test sites to return (optional) (default to 
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **place_name** | **str**| The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] 
- **geonames_id** | **int**| The geonames.org id of the place (either place_name or geonames_id must be provided) | [optional] 
- **max_distance** | **float**| Maximum distance in degrees lon/lat for test sites | [optional] [default to 0.5]
- **limit** | **int**| Maximum number of test sites to return | [optional] [default to 5]
+| Name             | Type      | Description                                                                                                 | Notes                       |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------- | --------------------------- |
+| **place_name**   | **str**   | The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional]                  |
+| **geonames_id**  | **int**   | The geonames.org id of the place (either place_name or geonames_id must be provided)                        | [optional]                  |
+| **max_distance** | **float** | Maximum distance in degrees lon/lat for test sites                                                          | [optional] [default to 0.5] |
+| **limit**        | **int**   | Maximum number of test sites to return                                                                      | [optional] [default to 5]   |
 
 ### Return type
 
@@ -266,10 +266,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -286,10 +286,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -310,10 +310,10 @@ geonames_id = 56 # int | The geonames.org id of the place (either place_name or 
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **place_name** | **str**| The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] 
- **geonames_id** | **int**| The geonames.org id of the place (either place_name or geonames_id must be provided) | [optional] 
+| Name            | Type    | Description                                                                                                 | Notes      |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------- | ---------- |
+| **place_name**  | **str** | The name of the place, e.g. a city, neighborhood, state (either place_name or geonames_id must be provided) | [optional] |
+| **geonames_id** | **int** | The geonames.org id of the place (either place_name or geonames_id must be provided)                        | [optional] |
 
 ### Return type
 
@@ -329,10 +329,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -349,10 +349,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -374,11 +374,11 @@ search_provider = 'geonames' # str | The search provider (only geonames supporte
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **q** | **str**| Free-form query string (e.g. a city, neighborhood, state, ...) | 
- **limit** | **int**| Maximum number of entries to return | [optional] [default to 5]
- **search_provider** | **str**| The search provider (only geonames supported so far) | [optional] [default to &#39;geonames&#39;]
+| Name                | Type    | Description                                                    | Notes                                      |
+| ------------------- | ------- | -------------------------------------------------------------- | ------------------------------------------ |
+| **q**               | **str** | Free-form query string (e.g. a city, neighborhood, state, ...) |
+| **limit**           | **int** | Maximum number of entries to return                            | [optional] [default to 5]                  |
+| **search_provider** | **str** | The search provider (only geonames supported so far)           | [optional] [default to &#39;geonames&#39;] |
 
 ### Return type
 
@@ -394,10 +394,10 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -414,10 +414,10 @@ import time
 import covid_local
 from covid_local.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://ec2-3-90-67-33.compute-1.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = covid_local.Configuration(
-    host = "http://localhost"
+    host = "http://ec2-3-90-67-33.compute-1.amazonaws.com"
 )
 
 
@@ -451,9 +451,9 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

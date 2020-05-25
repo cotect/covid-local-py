@@ -68,7 +68,7 @@ For further documentation, see below and the readme file of [covid-local-api](ht
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://ec2-3-90-67-33.compute-1.amazonaws.com*
 
 | Class        | Method                                                                  | HTTP request                | Description                                                     |
 | ------------ | ----------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------- |
