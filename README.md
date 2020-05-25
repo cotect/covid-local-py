@@ -63,6 +63,8 @@ with covid_local.ApiClient() as api_client:
         print(f"Exception when calling API endpoint: {e}")
 ```
 
+For further documentation, see below and the readme file of [covid-local-api](https://github.com/cotect/covid-local-api). 
+
 
 ## Documentation for API Endpoints
 
